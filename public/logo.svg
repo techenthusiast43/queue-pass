@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0B0F19" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Emerald-Cyan Primary Gradient -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Ticket Pass Gradient -->
+    <linearGradient id="ticketGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark Background -->
+  <rect width="512" height="512" rx="112" fill="#0B0F19"/>
+  <rect width="512" height="512" rx="112" fill="url(#bgGlow)"/>
+
+  <!-- Subtle Border Ring -->
+  <rect x="2" y="2" width="508" height="508" rx="110" stroke="#10B981" stroke-opacity="0.2" stroke-width="4"/>
+
+  <!-- Glowing Q Ring and Pass Center -->
+  <g filter="url(#neonGlow)">
+    <!-- Outer Q Ring Arc -->
+    <path d="M 256 80 
+             C 353.2 80, 432 158.8, 432 256 
+             C 432 312.4, 405.5 362.6, 364 394.5
+             L 395 425
+             C 403 433, 397 448, 386 448
+             L 340 448
+             C 334 448, 328 445, 324 441
+             L 294 411
+             C 281.7 414.3, 269 416, 256 416 
+             C 158.8 416, 80 337.2, 80 256 
+             C 80 158.8, 158.8 80, 256 80 Z" 
+          fill="none" 
+          stroke="url(#brandGrad)" 
+          stroke-width="36" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Fast-Lane Pass Ticket Icon inside Q -->
+    <g transform="translate(196, 176)">
+      <!-- Dynamic Fast-Forward / Chevrons inside -->
+      <path d="M 20 20 L 70 64 L 20 108" 
+            stroke="#34D399" 
+            stroke-width="20" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+            fill="none"/>
+      <path d="M 60 20 L 110 64 L 60 108" 
+            stroke="#06B6D4" 
+            stroke-width="20" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+            fill="none"/>
+    </g>
+  </g>
+
+  <!-- Accent Spark Dot -->
+  <circle cx="256" cy="116" r="6" fill="#A7F3D0" />
+</svg>
+
