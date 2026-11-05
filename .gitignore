@@ -1,0 +1,22 @@
+# Environment Variables (Keep private!)
+.env
+.env.local
+.env.*.local
+
+# Node & Build artifacts
+node_modules/
+dist/
+build/
+
+# Hardhat
+artifacts/
+cache/
+typechain/
+typechain-types/
+
+# System & IDE
+.DS_Store
+*.log
+.vscode/
+.idea/
+
